@@ -108,6 +108,172 @@ body.intro-locked{overflow:hidden}
 @media(max-width:480px){.opening-title{font-size:40px}.opening-names{font-size:24px}.envelope{transform:scale(.9);margin-bottom:20px}}
 @media(prefers-reduced-motion:reduce){.envelope,.envelope-letter,.envelope-flap,.opening-inner,.petal{animation:none!important}}
 
+/* Anniversary opening animation */
+body.intro-locked {
+  overflow: hidden;
+}
+
+.opening-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 35%, #713047, #3a1728 55%, #1c0b13);
+  transition: opacity .9s ease, visibility .9s ease;
+}
+
+.opening-screen.dismissed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.opening-inner {
+  width: min(440px, 100%);
+  animation: openingRise 1.2s ease both;
+}
+
+.opening-kicker,
+.opening-date,
+.opening-hint {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.envelope {
+  width: 190px;
+  height: 130px;
+  position: relative;
+  margin: 0 auto 28px;
+  animation: envelopeFloat 3s ease-in-out infinite;
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #e6c58b;
+}
+
+.envelope-letter {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 10px;
+  height: 95px;
+  background: #fff5e8;
+  color: #542438;
+  display: grid;
+  place-items: center;
+  font: italic 26px "Cormorant Garamond", serif;
+  animation: letterRise 2.4s ease-in-out infinite alternate;
+}
+
+.envelope-front {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #d8ad6b, #f1d7a2);
+  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0;
+  background: #f4dca9;
+  clip-path: polygon(0 0, 100% 0, 50% 61%);
+  transform-origin: top;
+  animation: flapOpen 2.4s ease-in-out infinite alternate;
+}
+
+.seal {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #8c344b;
+  color: #f8dfad;
+  display: grid;
+  place-items: center;
+}
+
+.opening-title {
+  font: italic 46px/1.05 "Cormorant Garamond", serif;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.opening-names {
+  font: 500 27px/1.2 "Cormorant Garamond", serif;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.opening-button {
+  background: var(--gold);
+  color: #2a101b;
+  border: 1px solid var(--gold);
+  padding: 14px 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  color: #e6c58b;
+  animation: petalFall 10s linear infinite;
+  pointer-events: none;
+}
+
+.petal:nth-of-type(1) { left: 12%; }
+.petal:nth-of-type(2) { left: 29%; animation-delay: 2s; }
+.petal:nth-of-type(3) { left: 72%; animation-delay: 1s; }
+.petal:nth-of-type(4) { left: 88%; animation-delay: 3s; }
+
+@keyframes openingRise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes envelopeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes letterRise {
+  from { transform: translateY(13px); }
+  to { transform: translateY(-8px); }
+}
+
+@keyframes flapOpen {
+  0%, 20% { transform: rotateX(0); }
+  70%, 100% { transform: rotateX(165deg); }
+}
+
+@keyframes petalFall {
+  0% { transform: translateY(-5vh) rotate(0); opacity: 0; }
+  10% { opacity: .7; }
+  100% { transform: translateY(110vh) rotate(480deg); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .opening-title { font-size: 40px; }
+  .opening-names { font-size: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-inner, .envelope, .envelope-letter,
+  .envelope-flap, .petal { animation: none !important; }
+}
+
 </style>
 </head>
 <body class="intro-locked">
@@ -202,6 +368,20 @@ const EVENT = {
   whatsappNumber: "919876543210"
 };
 
+document.body.classList.add("intro-locked");
+
+const openingScreen = document.getElementById("openingScreen");
+const openInvitationButton = document.getElementById("openInvitationButton");
+
+openInvitationButton.addEventListener("click", function () {
+  openingScreen.classList.add("dismissed");
+  document.body.classList.remove("intro-locked");
+
+  setTimeout(function () {
+    openingScreen.remove();
+  }, 1000);
+});
+
 
 const openingScreen = document.getElementById("openingScreen");
 function openInvitation(){
@@ -268,4 +448,44 @@ document.getElementById("shareButton").addEventListener("click",async()=>{
 });
 </script>
 </body>
+  
+<div class="opening-screen" id="openingScreen" role="dialog" aria-label="Open anniversary invitation">
+  <span class="petal">✦</span>
+  <span class="petal">❧</span>
+  <span class="petal">✦</span>
+  <span class="petal">❧</span>
+
+  <div class="opening-inner">
+    <p class="opening-kicker">A little note from our hearts</p>
+
+    <div class="envelope" aria-hidden="true">
+      <div class="envelope-back"></div>
+      <div class="envelope-letter">With Love</div>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+      <div class="seal">♥</div>
+    </div>
+
+    <h1 class="opening-title">You Are Invited</h1>
+
+    <p class="opening-names">
+      Mohammad Ghouse<br>
+      <span style="color:#d9a2a8">&amp;</span><br>
+      Anees Fathima Begum
+    </p>
+
+    <p class="opening-date">
+      OUR WEDDING ANNIVERSARY · 9 OCTOBER 2026
+    </p>
+
+    <button class="opening-button" id="openInvitationButton" type="button">
+      Tap to Open Invitation ✦
+    </button>
+
+    <p class="opening-hint">
+      A celebration of love, laughter &amp; togetherness
+    </p>
+  </div>
+</div>
+
 </html>

@@ -2,490 +2,290 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2a101b">
-<title>Our Anniversary | You're Invited</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f0e5">
+<meta name="description" content="A heartfelt invitation to celebrate the wedding anniversary of Mohammad Ghouse and Anees Fathima Begum.">
+<title>Mohammad Ghouse & Anees Fathima Begum | Anniversary Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--wine:#2a101b;--wine2:#421b2b;--rose:#d9a2a8;--gold:#e6c58b;--cream:#fff6ef;--muted:#d5c0c4;--line:#ffffff2c}
-*{box-sizing:border-box;margin:0;padding:0}
+:root {
+  --cream:#f7f0e5; --paper:#fffaf1; --ink:#3f3028; --muted:#857364;
+  --gold:#b18a4a; --gold-light:#e5cf9e; --wine:#6d293e; --rose:#b77c7d;
+  --line:rgba(177,138,74,.42); --shadow:0 24px 70px rgba(46,27,20,.18);
+}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--wine);color:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.7;overflow-x:hidden}
-a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
-.wrap{width:min(1080px,90%);margin:auto}
-header{position:absolute;z-index:5;top:0;left:0;width:100%;padding:22px 0}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.brand{font-family:"Cormorant Garamond",serif;letter-spacing:2px;font-size:23px;color:var(--gold)}
-.nav small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:100px 0 70px;background:radial-gradient(ellipse at 50% 42%,#7a35474d,transparent 52%),linear-gradient(140deg,#25101a,#481c30 55%,#211018)}
-.hero:before,.hero:after{content:"";position:absolute;width:min(78vw,590px);aspect-ratio:1;border:1px solid #e6c58b55;border-radius:50%;pointer-events:none}
-.hero:after{width:min(67vw,500px);border-color:#d9a2a844}
-.ornament{color:var(--gold);font-size:24px;letter-spacing:10px;margin-bottom:18px}
-.kicker{font-size:10px;text-transform:uppercase;letter-spacing:4px;color:var(--gold);margin-bottom:16px}
-.hero h1{font:400 clamp(58px,10vw,112px)/.92 "Cormorant Garamond",serif;position:relative}
-.hero h1 span{display:block;font-style:italic;color:var(--rose);margin:8px 0}
-.hero .intro{max-width:520px;color:var(--muted);margin:26px auto 30px;font-size:14px}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 22px;border:1px solid var(--gold);background:var(--gold);color:#2a101b;font-weight:600;font-size:12px;transition:.25s}
-.btn:hover{transform:translateY(-2px);background:#f5dbad}
-.btn.secondary{background:transparent;color:var(--gold)}
-.hero .hint{font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:22px;text-transform:uppercase}
-section.content{padding:82px 0}
-.heading{text-align:center;margin-bottom:38px}
-.heading .kicker{margin-bottom:10px}
-.heading h2{font:500 clamp(40px,7vw,62px)/1.05 "Cormorant Garamond",serif}
-.heading p{font-size:13px;color:var(--muted);margin-top:12px}
-.invite-card{max-width:790px;margin:auto;text-align:center;background:linear-gradient(145deg,#3b1928,#25111b);border:1px solid #e6c58b70;padding:clamp(28px,7vw,68px);position:relative}
-.invite-card:before{content:"";position:absolute;inset:10px;border:1px solid #e6c58b2b;pointer-events:none}
-.script{font:italic 24px "Cormorant Garamond",serif;color:var(--rose)}
-.couple{font:500 clamp(42px,8vw,76px)/1.04 "Cormorant Garamond",serif;color:var(--cream);margin:14px 0}
-.amp{color:var(--gold);font-style:italic}
-.message{max-width:520px;margin:0 auto;color:var(--muted);font-size:14px}
-.flourish{color:var(--gold);letter-spacing:8px;margin:25px 0}
-.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
-.detail{border:1px solid var(--line);padding:23px 12px}
-.detail .icon{font-size:22px;color:var(--gold)}
-.detail h3{font-size:10px;letter-spacing:2px;color:var(--rose);text-transform:uppercase;margin:8px 0}
-.detail p{font-size:13px;overflow-wrap:anywhere}
-.detail small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:850px;margin:auto}
-.story-card{border:1px solid var(--line);padding:30px;background:#ffffff08}
-.story-card .num{font:italic 44px "Cormorant Garamond",serif;color:var(--gold)}
-.story-card h3{font:500 30px "Cormorant Garamond",serif;margin:5px 0 10px}
-.story-card p{color:var(--muted);font-size:13px}
-.countdown-section{background:#1f0d15;padding:65px 0;text-align:center}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:640px;margin:30px auto 0}
-.time{border:1px solid #e6c58b55;padding:20px 8px}
-.time strong{font:500 clamp(32px,6vw,48px) "Cormorant Garamond",serif;color:var(--gold);display:block;line-height:1.2}
-.time span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
-.rsvp{max-width:650px;margin:auto;border:1px solid #e6c58b55;background:#ffffff08;padding:clamp(22px,5vw,40px)}
-.rsvp>p{font-size:13px;color:var(--muted);text-align:center;margin:-15px 0 24px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
-label{font-size:11px;color:var(--rose)}
-input,select,textarea{width:100%;padding:12px;background:#1d0c14;color:var(--cream);border:1px solid #ffffff35;outline:none;border-radius:0}
-input:focus,select:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:85px;resize:vertical}
-.rsvp .btn{width:100%;margin-top:20px}
-.note{text-align:center;color:var(--muted);font-size:10px;margin-top:10px}
-.venue{text-align:center;max-width:720px;margin:auto;border:1px solid #e6c58b55;padding:32px 20px}
-.venue h3{font:500 36px "Cormorant Garamond",serif}.venue p{color:var(--muted);font-size:13px;margin:10px 0 22px}
-.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.closing{text-align:center;padding:70px 0;border-top:1px solid var(--line)}
-.closing h2{font:italic 48px "Cormorant Garamond",serif;color:var(--gold)}
-.closing p{color:var(--muted);font-size:13px;margin:10px 0 20px}
-footer{text-align:center;padding:20px;color:var(--muted);font-size:10px;border-top:1px solid var(--line)}
-footer span{color:var(--rose)}
-.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:650px){.nav small{font-size:8px;letter-spacing:1px}.hero{min-height:92svh}.hero:before{width:88vw}.hero:after{width:75vw}section.content{padding:60px 0}.detail-grid{grid-template-columns:1fr}.detail{padding:16px}.story{grid-template-columns:1fr}.countdown{gap:6px}.time{padding:16px 3px}.time span{font-size:8px;letter-spacing:0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.actions .btn{width:100%}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-
-/* Romantic opening screen */
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,Arial,sans-serif}
 body.intro-locked{overflow:hidden}
-.opening-screen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 35%,#713047 0,#3a1728 45%,#1c0b13 100%);transition:opacity .9s ease,visibility .9s ease}
+button,a{font:inherit}
+a{color:inherit}
+button{cursor:pointer}
+.opening-screen{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;overflow:hidden;padding:22px;background:radial-gradient(ellipse at center,#fffaf1 0%,#f0e3cd 68%,#dfc9a6 100%);transition:opacity 1s ease,visibility 1s ease}
 .opening-screen.dismissed{opacity:0;visibility:hidden;pointer-events:none}
-.opening-inner{width:min(440px,100%);animation:openingRise 1.2s ease both}
-.opening-kicker{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-.envelope{width:190px;height:130px;position:relative;margin:0 auto 28px;filter:drop-shadow(0 18px 22px #0005);animation:envelopeFloat 3s ease-in-out infinite}
-.envelope-back{position:absolute;inset:0;background:#e6c58b;border:1px solid #f8e5bd}
-.envelope-letter{position:absolute;left:16px;right:16px;top:10px;height:95px;background:#fff5e8;color:#542438;display:grid;place-items:center;font:italic 26px 'Cormorant Garamond',serif;animation:letterRise 2.4s ease-in-out infinite alternate;box-shadow:0 0 0 1px #d9a2a855}
-.envelope-front{position:absolute;inset:0;background:linear-gradient(145deg,#d8ad6b,#f1d7a2);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%)}
-.envelope-flap{position:absolute;inset:0;background:#f4dca9;clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top;animation:flapOpen 2.4s ease-in-out infinite alternate}
-.seal{position:absolute;left:50%;top:57%;transform:translate(-50%,-50%);width:37px;height:37px;border-radius:50%;background:#8c344b;border:2px solid #e6c58b;color:#f8dfad;display:grid;place-items:center;font-size:19px;box-shadow:0 2px 8px #0003}
-.opening-title{font:italic 46px/1.05 'Cormorant Garamond',serif;color:var(--cream);margin-bottom:12px}
-.opening-names{font:500 27px/1.15 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:24px}
-.opening-date{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:27px}
-.opening-button{border:1px solid var(--gold);background:var(--gold);color:#2a101b;padding:14px 24px;letter-spacing:1px;font-size:11px;text-transform:uppercase;box-shadow:0 8px 25px #0003;transition:transform .2s}
-.opening-button:hover{transform:translateY(-2px)}
-.opening-hint{font-size:10px;color:var(--muted);margin-top:15px;letter-spacing:1px}
-.petal{position:absolute;top:-30px;color:#e6c58b;opacity:.6;animation:petalFall linear infinite;pointer-events:none}
-.petal:nth-of-type(1){left:12%;animation-duration:9s}.petal:nth-of-type(2){left:29%;animation-duration:12s;animation-delay:2s}.petal:nth-of-type(3){left:72%;animation-duration:10s;animation-delay:1s}.petal:nth-of-type(4){left:88%;animation-duration:13s;animation-delay:3s}
-@keyframes openingRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes envelopeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes letterRise{from{transform:translateY(13px)}to{transform:translateY(-8px)}}
-@keyframes flapOpen{0%,20%{transform:rotateX(0)}70%,100%{transform:rotateX(165deg)}}
-@keyframes petalFall{0%{transform:translateY(-5vh) rotate(0deg);opacity:0}10%{opacity:.7}100%{transform:translateY(110vh) rotate(480deg);opacity:0}}
-@media(max-width:480px){.opening-title{font-size:40px}.opening-names{font-size:24px}.envelope{transform:scale(.9);margin-bottom:20px}}
-@media(prefers-reduced-motion:reduce){.envelope,.envelope-letter,.envelope-flap,.opening-inner,.petal{animation:none!important}}
-
-/* Anniversary opening animation */
-body.intro-locked {
-  overflow: hidden;
+.opening-ornament{position:absolute;inset:15px;border:1px solid rgba(177,138,74,.65);outline:1px solid rgba(177,138,74,.28);outline-offset:5px;pointer-events:none}
+.opening-ornament:before,.opening-ornament:after{content:"❧";position:absolute;color:var(--gold);font-size:clamp(35px,7vw,66px);line-height:1}
+.opening-ornament:before{top:10px;left:12px;transform:rotate(-35deg)}
+.opening-ornament:after{right:12px;bottom:10px;transform:rotate(145deg)}
+.opening-inner{position:relative;z-index:2;width:min(520px,100%);text-align:center;padding:clamp(22px,5vw,48px) 18px;animation:riseIn 1.2s both}
+.opening-topline{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8e7045;margin:0 0 18px}
+.opening-monogram{font:normal clamp(34px,8vw,58px) "Great Vibes",cursive;color:var(--wine);margin:0 0 16px}
+.luxe-envelope{position:relative;width:min(330px,76vw);height:215px;margin:0 auto 27px;filter:drop-shadow(0 15px 15px rgba(82,54,31,.18));perspective:1000px}
+.env-back{position:absolute;inset:0;background:linear-gradient(135deg,#e6d2aa,#fff9e9 45%,#d6bb83);border:1px solid #c5a56a}
+.env-letter{position:absolute;left:8%;right:8%;top:7%;height:83%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(145deg,#fffdf7,#f3e6cf);border:1px solid #d7bd86;color:var(--wine);padding:12px;animation:letterPeek 3.8s ease-in-out infinite}
+.env-letter small{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#927445}
+.env-letter strong{font:clamp(23px,5vw,31px) "Great Vibes",cursive;font-weight:400;margin:9px 0}
+.env-letter span{font-size:9px;letter-spacing:2px;color:#8c7658}
+.env-pocket{position:absolute;inset:0;background:linear-gradient(135deg,#e9d6b0,#f9efd9 52%,#d4b57a);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border:1px solid #c4a36a}
+.env-flap{position:absolute;inset:0;background:linear-gradient(140deg,#f7e8c6,#d9bc80);clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top center;animation:flapReveal 3.8s ease-in-out infinite;backface-visibility:hidden}
+.env-seal{position:absolute;left:50%;top:59%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#f7e5bb;background:radial-gradient(circle at 30% 25%,#b65d65,#70263e 70%);border:2px solid #d5b878;box-shadow:0 2px 7px #9b7a4c;font:25px Georgia,serif}
+.opening-heading{font:clamp(35px,8vw,54px)/1.05 "Great Vibes",cursive;color:var(--wine);margin:0 0 10px}
+.opening-couple{font:clamp(21px,5vw,29px)/1.35 "Cormorant Garamond",serif;color:#76542e;margin:0 0 14px}
+.opening-date{font-size:9px;letter-spacing:2.4px;text-transform:uppercase;color:#806a4e;margin:0 0 23px}
+.open-button{padding:14px 23px;border:1px solid #b18a4a;background:linear-gradient(135deg,#8d394c,#5f2337);color:#fff5e5;letter-spacing:1.5px;text-transform:uppercase;font-size:10px;box-shadow:0 8px 22px #9b795344;transition:transform .2s,box-shadow .2s}
+.open-button:hover{transform:translateY(-2px);box-shadow:0 12px 25px #9b795366}
+.opening-note{font-size:9px;letter-spacing:1.6px;color:#9b8467;margin:17px 0 0}
+.floating-petals span{position:absolute;top:-30px;color:#b28c4f;opacity:.65;animation:petalDrift 10s linear infinite}
+.floating-petals span:nth-child(1){left:10%;animation-delay:-2s}
+.floating-petals span:nth-child(2){left:25%;animation-delay:-7s}
+.floating-petals span:nth-child(3){left:70%;animation-delay:-4s}
+.floating-petals span:nth-child(4){left:88%;animation-delay:-1s}
+@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes letterPeek{0%,100%{transform:translateY(5px)}50%{transform:translateY(-10px)}}
+@keyframes flapReveal{0%,16%{transform:rotateX(0)}45%,75%{transform:rotateX(165deg)}100%{transform:rotateX(0)}}
+@keyframes petalDrift{0%{transform:translateY(-5vh) rotate(0);opacity:0}10%{opacity:.65}100%{transform:translateY(110vh) rotate(400deg);opacity:0}}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,250,241,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{width:min(1120px,92%);margin:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{text-decoration:none;color:var(--wine);font:26px "Great Vibes",cursive}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;color:#6b5849}
+.nav-links a:hover{color:var(--wine)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);padding:8px;color:var(--wine)}
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:80px 20px;background:linear-gradient(rgba(255,250,241,.72),rgba(247,240,229,.92)),radial-gradient(ellipse at top,#e8d2a6,#f8f0e4 65%)}
+.wrap{width:min(1000px,92%);margin:auto}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.hero h1{font:clamp(50px,10vw,100px)/.98 "Great Vibes",cursive;color:var(--wine);font-weight:400;margin:0}
+.hero .amp{font:italic 40px "Cormorant Garamond",serif;color:var(--gold);margin:12px 0}
+.hero .subtitle{font:clamp(20px,4vw,30px) "Cormorant Garamond",serif;color:#76542e;margin:24px 0 12px}
+.hero .date-line{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin:20px 0 30px}
+.gold-button{display:inline-block;text-decoration:none;background:var(--wine);color:#fff7e9;padding:14px 23px;border:1px solid var(--gold);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+.section{padding:82px 20px}
+.section.paper{background:var(--paper)}
+.section-heading{text-align:center;font:clamp(38px,7vw,58px) "Great Vibes",cursive;color:var(--wine);font-weight:400;margin:0 0 14px}
+.section-intro{max-width:660px;margin:0 auto 32px;text-align:center;line-height:1.9;color:var(--muted);font-size:13px}
+.ornament{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:20px auto 30px}
+.ornament:before,.ornament:after{content:"";width:75px;height:1px;background:var(--line)}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.story-card{padding:28px 22px;border:1px solid var(--line);background:#fffaf4;text-align:center}
+.story-icon{font-size:27px;color:var(--gold)}
+.story-card h3{font:25px "Cormorant Garamond",serif;color:var(--wine);font-weight:500}
+.story-card p{font-size:12px;line-height:1.9;color:var(--muted)}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:620px;margin:30px auto}
+.time-box{border:1px solid var(--line);padding:22px 8px;background:#fffaf4;text-align:center}
+.time-box strong{display:block;font:40px "Cormorant Garamond",serif;color:var(--wine)}
+.time-box span{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.countdown-message{text-align:center;color:var(--wine);font:26px "Cormorant Garamond",serif}
+.rsvp-panel{max-width:700px;margin:auto;border:1px solid var(--line);background:#fffaf4;padding:clamp(24px,5vw,45px);text-align:center;box-shadow:var(--shadow)}
+.rsvp-panel p{font-size:13px;line-height:1.9;color:var(--muted)}
+.rsvp-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
+.outline-button{display:inline-block;padding:13px 20px;border:1px solid var(--gold);background:transparent;color:var(--wine);text-decoration:none;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.venue-card{max-width:720px;margin:auto;text-align:center;border:1px solid var(--line);padding:clamp(25px,5vw,45px);background:#fffaf4}
+.venue-card h3{font:32px "Cormorant Garamond",serif;color:var(--wine);font-weight:500}
+.venue-card p{font-size:13px;color:var(--muted);line-height:1.9}
+.footer{padding:35px 20px;text-align:center;background:#3f202d;color:#f6e8d0}
+.footer .signature{font:34px "Great Vibes",cursive;color:#e3c68e}
+.footer p{font-size:10px;letter-spacing:1.5px}
+@media(max-width:700px){
+ .nav{min-height:64px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 5%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}
+ .story-grid{grid-template-columns:1fr}.hero{min-height:76vh;padding:65px 18px}.section{padding:62px 18px}
+ .luxe-envelope{height:190px}.countdown{gap:7px}.time-box{padding:16px 4px}.time-box strong{font-size:31px}.time-box span{font-size:8px;letter-spacing:.8px}
 }
-
-.opening-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 24px;
-  background: radial-gradient(circle at 50% 35%, #713047, #3a1728 55%, #1c0b13);
-  transition: opacity .9s ease, visibility .9s ease;
-}
-
-.opening-screen.dismissed {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.opening-inner {
-  width: min(440px, 100%);
-  animation: openingRise 1.2s ease both;
-}
-
-.opening-kicker,
-.opening-date,
-.opening-hint {
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-bottom: 22px;
-}
-
-.envelope {
-  width: 190px;
-  height: 130px;
-  position: relative;
-  margin: 0 auto 28px;
-  animation: envelopeFloat 3s ease-in-out infinite;
-}
-
-.envelope-back {
-  position: absolute;
-  inset: 0;
-  background: #e6c58b;
-}
-
-.envelope-letter {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  top: 10px;
-  height: 95px;
-  background: #fff5e8;
-  color: #542438;
-  display: grid;
-  place-items: center;
-  font: italic 26px "Cormorant Garamond", serif;
-  animation: letterRise 2.4s ease-in-out infinite alternate;
-}
-
-.envelope-front {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, #d8ad6b, #f1d7a2);
-  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
-}
-
-.envelope-flap {
-  position: absolute;
-  inset: 0;
-  background: #f4dca9;
-  clip-path: polygon(0 0, 100% 0, 50% 61%);
-  transform-origin: top;
-  animation: flapOpen 2.4s ease-in-out infinite alternate;
-}
-
-.seal {
-  position: absolute;
-  left: 50%;
-  top: 57%;
-  transform: translate(-50%, -50%);
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  background: #8c344b;
-  color: #f8dfad;
-  display: grid;
-  place-items: center;
-}
-
-.opening-title {
-  font: italic 46px/1.05 "Cormorant Garamond", serif;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.opening-names {
-  font: 500 27px/1.2 "Cormorant Garamond", serif;
-  color: var(--gold);
-  margin-bottom: 24px;
-}
-
-.opening-button {
-  background: var(--gold);
-  color: #2a101b;
-  border: 1px solid var(--gold);
-  padding: 14px 24px;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.petal {
-  position: absolute;
-  top: -30px;
-  color: #e6c58b;
-  animation: petalFall 10s linear infinite;
-  pointer-events: none;
-}
-
-.petal:nth-of-type(1) { left: 12%; }
-.petal:nth-of-type(2) { left: 29%; animation-delay: 2s; }
-.petal:nth-of-type(3) { left: 72%; animation-delay: 1s; }
-.petal:nth-of-type(4) { left: 88%; animation-delay: 3s; }
-
-@keyframes openingRise {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes envelopeFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-
-@keyframes letterRise {
-  from { transform: translateY(13px); }
-  to { transform: translateY(-8px); }
-}
-
-@keyframes flapOpen {
-  0%, 20% { transform: rotateX(0); }
-  70%, 100% { transform: rotateX(165deg); }
-}
-
-@keyframes petalFall {
-  0% { transform: translateY(-5vh) rotate(0); opacity: 0; }
-  10% { opacity: .7; }
-  100% { transform: translateY(110vh) rotate(480deg); opacity: 0; }
-}
-
-@media (max-width: 480px) {
-  .opening-title { font-size: 40px; }
-  .opening-names { font-size: 24px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .opening-inner, .envelope, .envelope-letter,
-  .envelope-flap, .petal { animation: none !important; }
-}
-
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body class="intro-locked">
-<div class="opening-screen" id="openingScreen" role="dialog" aria-label="Open anniversary invitation">
-  <span class="petal">✦</span><span class="petal">❧</span><span class="petal">✦</span><span class="petal">❧</span>
+
+<!-- Opening screen: ivory, embossed-gold style envelope -->
+<div class="opening-screen" id="openingScreen" role="dialog" aria-modal="true" aria-label="Open anniversary invitation">
+  <div class="opening-ornament" aria-hidden="true"></div>
+  <div class="floating-petals" aria-hidden="true"><span>✦</span><span>❧</span><span>✦</span><span>❧</span></div>
   <div class="opening-inner">
-    <p class="opening-kicker">A little note from our hearts</p>
-    <div class="envelope" aria-hidden="true"><div class="envelope-back"></div><div class="envelope-letter">With Love</div><div class="envelope-front"></div><div class="envelope-flap"></div><div class="seal">♥</div></div>
-    <h1 class="opening-title">You Are Invited</h1>
-    <p class="opening-names">Mohammad Ghouse<br><span style="font-style:italic;color:var(--rose)">&amp;</span><br>Anees Fathima Begum</p>
-    <p class="opening-date">OUR WEDDING ANNIVERSARY · 9 OCTOBER 2026</p>
-    <button class="opening-button" id="openInvitationButton" type="button">Tap to Open Invitation ✦</button>
-    <p class="opening-hint">A celebration of love, laughter &amp; togetherness</p>
+    <p class="opening-topline">A little note from our hearts</p>
+    <p class="opening-monogram">M <span style="font-size:.55em">&amp;</span> A</p>
+    <div class="luxe-envelope" aria-hidden="true">
+      <div class="env-back"></div>
+      <div class="env-letter"><small>With love, always</small><strong>Mohammad &amp; Anees</strong><span>OUR ANNIVERSARY</span></div>
+      <div class="env-pocket"></div>
+      <div class="env-flap"></div>
+      <div class="env-seal">♥</div>
+    </div>
+    <h1 class="opening-heading">You Are Invited</h1>
+    <p class="opening-couple">Mohammad Ghouse<br><span style="color:#b18a4a">&amp;</span><br>Anees Fathima Begum</p>
+    <p class="opening-date">Our Wedding Anniversary · 9 October 2026</p>
+    <button class="open-button" id="openInvitationButton" type="button">Open the Invitation&nbsp; ✦</button>
+    <p class="opening-note">A celebration of love, laughter &amp; togetherness</p>
   </div>
 </div>
 
-<header><div class="wrap nav"><a class="brand" href="#">FOREVER & ALWAYS</a><small>A celebration of love</small></div></header>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#home">Forever &amp; Always</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" type="button">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a><a href="#our-story">Our Story</a><a href="#countdown">Countdown</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+    </div>
+  </nav>
+</header>
+
 <main>
-<section class="hero">
+<section class="hero" id="home">
   <div class="wrap">
-    <div class="ornament">✦ ❧ ✦</div>
-    <p class="kicker">Please join us to celebrate</p>
-    <h1>Our Wedding <span>Anniversary</span></h1>
-    <p class="intro">A beautiful journey, countless memories, and a love that keeps growing. We would be delighted to celebrate this special milestone with you.</p>
-    <a class="btn" href="#invitation">Open Your Invitation <span>↗</span></a>
-    <p class="hint">Love · Laughter · Togetherness</p>
+    <p class="eyebrow">Three years of love · One beautiful journey</p>
+    <h1>Mohammad Ghouse</h1>
+    <div class="amp">&amp;</div>
+    <h1>Anees Fathima Begum</h1>
+    <p class="subtitle">Our Wedding Anniversary</p>
+    <div class="ornament">❦</div>
+    <p class="date-line">9 October 2026 · 7:00 PM onwards</p>
+    <a class="gold-button" href="#invitation">Celebrate With Us</a>
   </div>
 </section>
 
-<section class="content" id="invitation"><div class="wrap">
-  <div class="heading reveal"><p class="kicker">With love and gratitude</p><h2>Two Hearts, One Beautiful Journey</h2><p>Celebrating the memories we've made and the moments still to come.</p></div>
-  <article class="invite-card reveal">
-    <p class="script">Together with our families</p>
-    <div class="couple"><span id="partnerOne">Ayesha</span><br><span class="amp">&amp;</span><br><span id="partnerTwo">Mohammad</span></div>
-    <p class="message" id="inviteMessage">As we celebrate another year of love, friendship and togetherness, we warmly invite you to share this special day with us.</p>
-    <div class="flourish">✦ ─ ❧ ─ ✦</div>
-    <p class="kicker">Our anniversary celebration</p>
-    <div class="detail-grid">
-      <div class="detail"><div class="icon">♡</div><h3>Date</h3><p id="eventDate">25 December 2026</p><small id="eventDay">Friday</small></div>
-      <div class="detail"><div class="icon">◷</div><h3>Time</h3><p id="eventTime">7:00 PM onwards</p><small>Kindly arrive on time</small></div>
-      <div class="detail"><div class="icon">⌖</div><h3>Venue</h3><p id="venueShort">The Celebration Hall</p><small>We look forward to seeing you</small></div>
-    </div>
-  </article>
-</div></section>
-
-<section class="content"><div class="wrap">
-  <div class="heading reveal"><p class="kicker">Our journey</p><h2>A Love Worth Celebrating</h2><p>Every year adds another beautiful chapter to our story.</p></div>
-  <div class="story">
-    <article class="story-card reveal"><div class="num">01</div><h3>The Day It Began</h3><p id="storyOne">A special day brought us together and began a journey filled with love, trust and friendship.</p></article>
-    <article class="story-card reveal"><div class="num">02</div><h3>Forever in Progress</h3><p id="storyTwo">Through every smile and every challenge, we continue to choose each other—today and always.</p></article>
+<section class="section paper" id="invitation">
+  <div class="wrap">
+    <h2 class="section-heading">With Love in Our Hearts</h2>
+    <div class="ornament">✧</div>
+    <p class="section-intro">As we celebrate another year of love, friendship and togetherness, we warmly invite you to share this special day with us. Your presence will make our celebration even more meaningful.</p>
+    <p class="section-intro" style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--wine)">“Every love story is beautiful, but ours is our favourite.”</p>
   </div>
-</div></section>
+</section>
 
-<section class="countdown-section reveal"><div class="wrap">
-  <p class="kicker">The celebration begins in</p><div class="heading"><h2 id="countdownHeading">Counting Down to Our Special Day</h2><p>We can't wait to celebrate with you.</p></div>
-  <div class="countdown"><div class="time"><strong id="days">00</strong><span>Days</span></div><div class="time"><strong id="hours">00</strong><span>Hours</span></div><div class="time"><strong id="minutes">00</strong><span>Minutes</span></div><div class="time"><strong id="seconds">00</strong><span>Seconds</span></div></div>
-</div></section>
-
-<section class="content" id="rsvp"><div class="wrap">
-  <div class="heading reveal"><p class="kicker">Kindly respond</p><h2>Will You Celebrate With Us?</h2><p>Your presence will make our day even more special.</p></div>
-  <form class="rsvp reveal" id="rsvpForm"><p>Please share your response below. WhatsApp will open with your RSVP message ready to send.</p>
-    <div class="form-grid">
-      <div class="field"><label for="guestName">Your name *</label><input id="guestName" type="text" maxlength="100" required placeholder="Enter your full name"></div>
-      <div class="field"><label for="guestCount">Number of guests *</label><select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6 or more</option></select></div>
-      <div class="field full"><label for="attendance">Will you attend? *</label><select id="attendance"><option value="Yes, we will attend">Yes, we'll be there!</option><option value="Sorry, we cannot attend">Sorry, we can't attend</option></select></div>
-      <div class="field full"><label for="guestMessage">A note for the couple (optional)</label><textarea id="guestMessage" maxlength="500" placeholder="Write your wishes here"></textarea></div>
+<section class="section" id="our-story">
+  <div class="wrap">
+    <h2 class="section-heading">Our Little Love Story</h2>
+    <p class="section-intro">Three years of memories, countless reasons to smile, and a lifetime still waiting to unfold.</p>
+    <div class="story-grid">
+      <article class="story-card"><div class="story-icon">♡</div><h3>The Beginning</h3><p>Two hearts came together and began a beautiful journey built on trust, care and love.</p></article>
+      <article class="story-card"><div class="story-icon">✧</div><h3>Growing Together</h3><p>Every day has brought new memories, lessons, laughter and reasons to be grateful.</p></article>
+      <article class="story-card"><div class="story-icon">∞</div><h3>Always &amp; Forever</h3><p>Our favourite chapter is the one still being written, side by side, hand in hand.</p></article>
     </div>
-    <button class="btn" type="submit">Send RSVP via WhatsApp ↗</button><p class="note">Your response is sent only when you press Send in WhatsApp.</p>
-  </form>
-</div></section>
+  </div>
+</section>
 
-<section class="content" id="venue"><div class="wrap">
-  <div class="heading reveal"><p class="kicker">Join us</p><h2>Celebrate With Us</h2><p>We look forward to sharing this memorable evening with you.</p></div>
-  <div class="venue reveal"><h3 id="venueName">The Celebration Hall</h3><p id="venueAddress">Enter your venue address, Hyderabad, Telangana</p><div class="actions"><a class="btn" id="mapLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get Directions ↗</a><button class="btn secondary" id="shareButton" type="button">Share Invitation</button></div></div>
-</div></section>
-<section class="closing"><div class="wrap"><p class="kicker">With all our love</p><h2>Forever &amp; Always</h2><p>Thank you for being part of our story.</p><a class="btn secondary" href="#rsvp">RSVP Now</a></div></section>
+<section class="section paper" id="countdown">
+  <div class="wrap">
+    <h2 class="section-heading">Counting Our Blessings</h2>
+    <p class="section-intro">The day we celebrate our journey together.</p>
+    <div class="countdown" aria-label="Countdown to anniversary">
+      <div class="time-box"><strong id="days">—</strong><span>Days</span></div>
+      <div class="time-box"><strong id="hours">—</strong><span>Hours</span></div>
+      <div class="time-box"><strong id="minutes">—</strong><span>Minutes</span></div>
+      <div class="time-box"><strong id="seconds">—</strong><span>Seconds</span></div>
+    </div>
+    <p class="countdown-message" id="countdownMessage" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="section" id="venue">
+  <div class="wrap">
+    <h2 class="section-heading">Join Us for the Celebration</h2>
+    <p class="section-intro">We would love to celebrate this special milestone with you.</p>
+    <div class="venue-card">
+      <div class="story-icon">⌖</div>
+      <h3>The Celebration Hall</h3>
+      <p>9 October 2026 · 7:00 PM onwards</p>
+      <p>Tap below to open the venue location in Google Maps.</p>
+      <a class="gold-button" href="https://maps.app.goo.gl/65NxPsH36g7evSeP6" target="_blank" rel="noopener noreferrer">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="section paper" id="rsvp">
+  <div class="wrap">
+    <div class="rsvp-panel">
+      <h2 class="section-heading">Will You Join Us?</h2>
+      <p>Your presence is the most precious gift. Kindly let us know if you can join our celebration.</p>
+      <div class="rsvp-actions">
+        <a class="gold-button" id="rsvpYes" href="#" target="_blank" rel="noopener noreferrer">Yes, With Pleasure</a>
+        <a class="outline-button" id="rsvpMaybe" href="#" target="_blank" rel="noopener noreferrer">Send a Message</a>
+      </div>
+      <p style="font-size:10px;margin-top:20px">Please update the WhatsApp number in the script before sharing this website.</p>
+    </div>
+  </div>
+</section>
 </main>
-<footer>Made with <span>♥</span> to celebrate a lifetime of love</footer>
+
+<footer class="footer">
+  <div class="signature">Mohammad &amp; Anees</div>
+  <p>WITH LOVE, ALWAYS · 9 OCTOBER 2026</p>
+</footer>
+
 <script>
-/* CUSTOMIZE YOUR ANNIVERSARY DETAILS IN THIS OBJECT */
+/* Event details: update the WhatsApp number before publishing. */
 const EVENT = {
   partnerOne: "Mohammad Ghouse",
   partnerTwo: "Anees Fathima Begum",
-  title: "Our Wedding Anniversary",
-  message: "As we celebrate another year of love, friendship and togetherness, we warmly invite you to share this special day with us.",
   dateTime: "2026-10-09T19:00:00+05:30",
   displayDate: "9 October 2026",
   displayTime: "7:00 PM onwards",
   venue: "The Celebration Hall",
-  address: "Tap Get Directions to open our venue location in Google Maps",
   mapUrl: "https://maps.app.goo.gl/65NxPsH36g7evSeP6",
-  whatsappNumber: "919876543210"
+  whatsappNumber: "919700254506"
 };
 
-document.body.classList.add("intro-locked");
-
+/* Opening animation interaction */
 const openingScreen = document.getElementById("openingScreen");
 const openInvitationButton = document.getElementById("openInvitationButton");
-
-openInvitationButton.addEventListener("click", function () {
+function openInvitation() {
   openingScreen.classList.add("dismissed");
   document.body.classList.remove("intro-locked");
-
-  setTimeout(function () {
-    openingScreen.remove();
-  }, 1000);
+  window.setTimeout(() => openingScreen.remove(), 1050);
+}
+openInvitationButton.addEventListener("click", openInvitation);
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && openingScreen && openingScreen.isConnected) openInvitation();
 });
 
-
-const openingScreen = document.getElementById("openingScreen");
-function openInvitation(){
-  openingScreen.classList.add("dismissed");
-  document.body.classList.remove("intro-locked");
-  window.setTimeout(()=>openingScreen.remove(),1000);
-}
-document.getElementById("openInvitationButton").addEventListener("click",openInvitation);
-
-document.title = EVENT.title + " | You're Invited";
-document.getElementById("partnerOne").textContent = EVENT.partnerOne;
-document.getElementById("partnerTwo").textContent = EVENT.partnerTwo;
-document.getElementById("inviteMessage").textContent = EVENT.message;
-document.getElementById("eventDate").textContent = EVENT.displayDate;
-document.getElementById("eventTime").textContent = EVENT.displayTime;
-document.getElementById("venueShort").textContent = EVENT.venue;
-document.getElementById("venueName").textContent = EVENT.venue;
-document.getElementById("venueAddress").textContent = EVENT.address;
-document.getElementById("eventDay").textContent = new Intl.DateTimeFormat("en-IN",{weekday:"long",timeZone:"Asia/Kolkata"}).format(new Date(EVENT.dateTime));
-document.getElementById("mapLink").href = EVENT.mapUrl;
-
-const eventTimestamp = new Date(EVENT.dateTime).getTime();
-const pad = n => String(n).padStart(2,"0");
-function updateCountdown(){
-  const remaining = eventTimestamp - Date.now();
-  if(!Number.isFinite(eventTimestamp) || remaining <= 0){
-    ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
-    document.getElementById("countdownHeading").textContent = Number.isFinite(eventTimestamp) ? "Today Is Our Special Day!" : "Please Check the Event Date";
+/* Countdown: handles dates in the past as well as future dates. */
+const eventTime = new Date(EVENT.dateTime).getTime();
+function updateCountdown() {
+  const remaining = eventTime - Date.now();
+  if (remaining <= 0) {
+    ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).textContent = "0");
+    document.getElementById("countdownMessage").textContent = "Celebrating love, memories & togetherness. Thank you for being part of our journey!";
     return;
   }
-  document.getElementById("days").textContent = pad(Math.floor(remaining/86400000));
-  document.getElementById("hours").textContent = pad(Math.floor((remaining%86400000)/3600000));
-  document.getElementById("minutes").textContent = pad(Math.floor((remaining%3600000)/60000));
-  document.getElementById("seconds").textContent = pad(Math.floor((remaining%60000)/1000));
+  document.getElementById("days").textContent = Math.floor(remaining / 86400000);
+  document.getElementById("hours").textContent = Math.floor((remaining % 86400000) / 3600000);
+  document.getElementById("minutes").textContent = Math.floor((remaining % 3600000) / 60000);
+  document.getElementById("seconds").textContent = Math.floor((remaining % 60000) / 1000);
 }
-updateCountdown(); setInterval(updateCountdown,1000);
+updateCountdown();
+window.setInterval(updateCountdown, 1000);
 
-const revealItems=document.querySelectorAll(".reveal");
-if("IntersectionObserver" in window){
- const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
- revealItems.forEach(el=>observer.observe(el));
-}else revealItems.forEach(el=>el.classList.add("visible"));
+/* WhatsApp RSVP: replace with your own full number, including country code. */
+function makeWhatsAppLink(message) {
+  return "https://wa.me/" + EVENT.whatsappNumber + "?text=" + encodeURIComponent(message);
+}
+document.getElementById("rsvpYes").href = makeWhatsAppLink(
+  "Hello Mohammad and Anees! Thank you for inviting me to your wedding anniversary on " + EVENT.displayDate + ". I am happy to join the celebration."
+);
+document.getElementById("rsvpMaybe").href = makeWhatsAppLink(
+  "Hello Mohammad and Anees! Thank you for the anniversary invitation. I would like to message you about the celebration."
+);
 
-document.getElementById("rsvpForm").addEventListener("submit",e=>{
- e.preventDefault();
- const name=document.getElementById("guestName").value.trim();
- const guests=document.getElementById("guestCount").value;
- const attendance=document.getElementById("attendance").value;
- const note=document.getElementById("guestMessage").value.trim();
- if(!name){alert("Please enter your name.");return}
- const message=["RSVP - "+EVENT.title,"","Name: "+name,"Guests: "+guests,"Attendance: "+attendance,"Date: "+EVENT.displayDate,"Venue: "+EVENT.venue,note?"Message: "+note:""].filter(Boolean).join("\n");
- const number=EVENT.whatsappNumber.replace(/\D/g,"");
- if(!/^\d{10,15}$/.test(number)||number==="919876543210"){alert("Please replace the sample WhatsApp number in the EVENT settings with your number including country code.");return}
- window.open("https://wa.me/"+number+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+/* Mobile navigation */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
-
-document.getElementById("shareButton").addEventListener("click",async()=>{
- const data={title:EVENT.title,text:"You're invited to "+EVENT.title+" on "+EVENT.displayDate+". "+EVENT.address,url:window.location.href};
- try{
-  if(navigator.share) await navigator.share(data);
-  else if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(data.text+"\n"+data.url);alert("Invitation link and details copied!")}
-  else window.prompt("Copy your invitation link:",window.location.href);
- }catch(error){if(error.name!=="AbortError")alert("Unable to share automatically. Please copy the page link.")}
-});
+navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+}));
 </script>
 </body>
-  
-<div class="opening-screen" id="openingScreen" role="dialog" aria-label="Open anniversary invitation">
-  <span class="petal">✦</span>
-  <span class="petal">❧</span>
-  <span class="petal">✦</span>
-  <span class="petal">❧</span>
-
-  <div class="opening-inner">
-    <p class="opening-kicker">A little note from our hearts</p>
-
-    <div class="envelope" aria-hidden="true">
-      <div class="envelope-back"></div>
-      <div class="envelope-letter">With Love</div>
-      <div class="envelope-front"></div>
-      <div class="envelope-flap"></div>
-      <div class="seal">♥</div>
-    </div>
-
-    <h1 class="opening-title">You Are Invited</h1>
-
-    <p class="opening-names">
-      Mohammad Ghouse<br>
-      <span style="color:#d9a2a8">&amp;</span><br>
-      Anees Fathima Begum
-    </p>
-
-    <p class="opening-date">
-      OUR WEDDING ANNIVERSARY · 9 OCTOBER 2026
-    </p>
-
-    <button class="opening-button" id="openInvitationButton" type="button">
-      Tap to Open Invitation ✦
-    </button>
-
-    <p class="opening-hint">
-      A celebration of love, laughter &amp; togetherness
-    </p>
-  </div>
-</div>
-
 </html>

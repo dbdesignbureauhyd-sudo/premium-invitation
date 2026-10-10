@@ -1,245 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#11110f">
-  <title>You're Invited | A Special Celebration</title>
-  <meta name="description" content="Join us for a special celebration. Open your invitation and RSVP online.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#11110f;--panel:#191916;--gold:#d9bd83;--gold-light:#f1dfb4;--text:#f8f3e8;--muted:#b8b1a3;--border:rgba(217,189,131,.28)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.7;overflow-x:hidden}
-    button,input,select,textarea{font:inherit}
-    button,a{-webkit-tap-highlight-color:transparent}
-    a{color:inherit;text-decoration:none}
-    button{cursor:pointer}
-    .container{width:min(1080px,90%);margin:auto}
-    .topbar{padding:23px 0;border-bottom:1px solid rgba(255,255,255,.07)}
-    .topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
-    .brand{font-family:"Cormorant Garamond",serif;font-size:25px;letter-spacing:2px;color:var(--gold-light)}
-    .top-label{color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase}
-    .hero{min-height:680px;padding:85px 0 90px;display:grid;place-items:center;text-align:center;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,rgba(129,102,52,.20),transparent 55%),linear-gradient(180deg,#151511,#11110f)}
-    .hero::before,.hero::after{content:"";position:absolute;width:280px;height:280px;border:1px solid var(--border);border-radius:50%;z-index:-1;animation:orbit 20s linear infinite}
-    .hero::after{width:360px;height:360px;animation-direction:reverse;opacity:.45}
-    @keyframes orbit{from{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.06)}to{transform:rotate(360deg) scale(1)}}
-    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:11px;margin-bottom:22px}
-    .hero h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(56px,9vw,100px);line-height:.98;margin-bottom:25px;animation:rise .9s ease both}
-    .hero h1 span{display:block;font-style:italic;color:var(--gold)}
-    .hero-copy{color:var(--muted);max-width:460px;margin:0 auto 32px;font-size:15px}
-    .gold-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--gold);border-radius:3px;background:var(--gold);color:#19170f;padding:14px 25px;min-height:48px;font-weight:700;transition:.25s ease}
-    .gold-button:hover{background:var(--gold-light);transform:translateY(-2px)}
-    .outline-button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:3px;padding:12px 22px;min-height:46px;color:var(--gold-light);background:transparent;transition:.25s ease}
-    .outline-button:hover{background:rgba(217,189,131,.09)}
-    .hero-note{color:var(--muted);font-size:11px;letter-spacing:2px;margin-top:22px;text-transform:uppercase}
-    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-    .section{padding:85px 0}
-    .section-heading{text-align:center;margin-bottom:40px}
-    .section-heading h2{font-family:"Cormorant Garamond",serif;font-size:clamp(36px,6vw,54px);line-height:1.15;font-weight:500}
-    .section-heading p{color:var(--muted);margin-top:12px;font-size:14px}
-    .invitation{background:var(--panel);border:1px solid var(--border);padding:clamp(25px,6vw,65px);max-width:790px;margin:auto;text-align:center;position:relative}
-    .invitation::before{content:"";position:absolute;inset:10px;border:1px solid rgba(217,189,131,.13);pointer-events:none}
-    .invitation .small-title{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:11px}
-    .invitation h2{font-family:"Cormorant Garamond",serif;font-size:clamp(40px,7vw,65px);font-weight:500;line-height:1.1;margin:20px 0}
-    .invitation .message{color:var(--muted);max-width:490px;margin:auto}
-    .divider{color:var(--gold);margin:28px 0;letter-spacing:8px}
-    .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}
-    .detail-card{padding:25px 14px;border:1px solid var(--border);background:rgba(255,255,255,.015);text-align:center}
-    .detail-card .symbol{color:var(--gold);font-size:23px;margin-bottom:8px}
-    .detail-card h3{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
-    .detail-card p{font-size:14px;overflow-wrap:anywhere}
-    .detail-card .subtext{color:var(--muted);font-size:12px;margin-top:4px}
-    .countdown-section{background:#181813;text-align:center;padding:65px 0}
-    .countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:650px;margin:30px auto 0}
-    .time-box{border:1px solid var(--border);padding:22px 8px}
-    .time-box strong{display:block;color:var(--gold-light);font-family:"Cormorant Garamond",serif;font-size:clamp(32px,6vw,48px);line-height:1.2;font-weight:500}
-    .time-box span{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
-    .rsvp-card{max-width:650px;margin:auto;padding:clamp(22px,5vw,40px);border:1px solid var(--border);background:var(--panel)}
-    .rsvp-card>p{text-align:center;color:var(--muted);font-size:14px;margin:-20px 0 25px}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .field{display:flex;flex-direction:column;gap:7px}
-    .field.full{grid-column:1/-1}
-    .field label{font-size:12px;color:var(--gold-light)}
-    .field input,.field select,.field textarea{width:100%;min-width:0;background:#11110f;color:var(--text);border:1px solid #444033;border-radius:2px;padding:12px;outline:none}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
-    .field textarea{resize:vertical;min-height:90px}
-    .rsvp-card .gold-button{width:100%;margin-top:22px}
-    .form-note{text-align:center;color:var(--muted);font-size:11px;margin-top:12px}
-    .venue-box{max-width:700px;margin:auto;border:1px solid var(--border);padding:30px;text-align:center}
-    .venue-box h3{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:500}
-    .venue-box p{color:var(--muted);margin:10px 0 22px}
-    .venue-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-    .closing{text-align:center;padding:65px 0;border-top:1px solid rgba(255,255,255,.07)}
-    .closing h2{font-family:"Cormorant Garamond",serif;font-size:42px;color:var(--gold-light);font-weight:500}
-    .closing p{color:var(--muted);margin:8px 0 22px}
-    footer{padding:22px 0;border-top:1px solid rgba(255,255,255,.07);text-align:center;color:var(--muted);font-size:11px}
-    footer span{color:var(--gold)}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:650px){.top-label{font-size:9px;letter-spacing:1px}.hero{min-height:590px;padding:65px 0}.hero::before{width:220px;height:220px}.hero::after{width:280px;height:280px}.section{padding:62px 0}.details-grid{grid-template-columns:1fr}.detail-card{padding:18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.countdown{gap:7px}.time-box{padding:16px 3px}.time-box span{font-size:9px;letter-spacing:0}.venue-box{padding:23px 15px}.venue-actions a,.venue-actions button{width:100%}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2a101b">
+<title>Our Anniversary | You're Invited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#2a101b;--wine2:#421b2b;--rose:#d9a2a8;--gold:#e6c58b;--cream:#fff6ef;--muted:#d5c0c4;--line:#ffffff2c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--wine);color:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.wrap{width:min(1080px,90%);margin:auto}
+header{position:absolute;z-index:5;top:0;left:0;width:100%;padding:22px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:"Cormorant Garamond",serif;letter-spacing:2px;font-size:23px;color:var(--gold)}
+.nav small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:100px 0 70px;background:radial-gradient(ellipse at 50% 42%,#7a35474d,transparent 52%),linear-gradient(140deg,#25101a,#481c30 55%,#211018)}
+.hero:before,.hero:after{content:"";position:absolute;width:min(78vw,590px);aspect-ratio:1;border:1px solid #e6c58b55;border-radius:50%;pointer-events:none}
+.hero:after{width:min(67vw,500px);border-color:#d9a2a844}
+.ornament{color:var(--gold);font-size:24px;letter-spacing:10px;margin-bottom:18px}
+.kicker{font-size:10px;text-transform:uppercase;letter-spacing:4px;color:var(--gold);margin-bottom:16px}
+.hero h1{font:400 clamp(58px,10vw,112px)/.92 "Cormorant Garamond",serif;position:relative}
+.hero h1 span{display:block;font-style:italic;color:var(--rose);margin:8px 0}
+.hero .intro{max-width:520px;color:var(--muted);margin:26px auto 30px;font-size:14px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 22px;border:1px solid var(--gold);background:var(--gold);color:#2a101b;font-weight:600;font-size:12px;transition:.25s}
+.btn:hover{transform:translateY(-2px);background:#f5dbad}
+.btn.secondary{background:transparent;color:var(--gold)}
+.hero .hint{font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:22px;text-transform:uppercase}
+section.content{padding:82px 0}
+.heading{text-align:center;margin-bottom:38px}
+.heading .kicker{margin-bottom:10px}
+.heading h2{font:500 clamp(40px,7vw,62px)/1.05 "Cormorant Garamond",serif}
+.heading p{font-size:13px;color:var(--muted);margin-top:12px}
+.invite-card{max-width:790px;margin:auto;text-align:center;background:linear-gradient(145deg,#3b1928,#25111b);border:1px solid #e6c58b70;padding:clamp(28px,7vw,68px);position:relative}
+.invite-card:before{content:"";position:absolute;inset:10px;border:1px solid #e6c58b2b;pointer-events:none}
+.script{font:italic 24px "Cormorant Garamond",serif;color:var(--rose)}
+.couple{font:500 clamp(42px,8vw,76px)/1.04 "Cormorant Garamond",serif;color:var(--cream);margin:14px 0}
+.amp{color:var(--gold);font-style:italic}
+.message{max-width:520px;margin:0 auto;color:var(--muted);font-size:14px}
+.flourish{color:var(--gold);letter-spacing:8px;margin:25px 0}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.detail{border:1px solid var(--line);padding:23px 12px}
+.detail .icon{font-size:22px;color:var(--gold)}
+.detail h3{font-size:10px;letter-spacing:2px;color:var(--rose);text-transform:uppercase;margin:8px 0}
+.detail p{font-size:13px;overflow-wrap:anywhere}
+.detail small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:850px;margin:auto}
+.story-card{border:1px solid var(--line);padding:30px;background:#ffffff08}
+.story-card .num{font:italic 44px "Cormorant Garamond",serif;color:var(--gold)}
+.story-card h3{font:500 30px "Cormorant Garamond",serif;margin:5px 0 10px}
+.story-card p{color:var(--muted);font-size:13px}
+.countdown-section{background:#1f0d15;padding:65px 0;text-align:center}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:640px;margin:30px auto 0}
+.time{border:1px solid #e6c58b55;padding:20px 8px}
+.time strong{font:500 clamp(32px,6vw,48px) "Cormorant Garamond",serif;color:var(--gold);display:block;line-height:1.2}
+.time span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.rsvp{max-width:650px;margin:auto;border:1px solid #e6c58b55;background:#ffffff08;padding:clamp(22px,5vw,40px)}
+.rsvp>p{font-size:13px;color:var(--muted);text-align:center;margin:-15px 0 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+label{font-size:11px;color:var(--rose)}
+input,select,textarea{width:100%;padding:12px;background:#1d0c14;color:var(--cream);border:1px solid #ffffff35;outline:none;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:85px;resize:vertical}
+.rsvp .btn{width:100%;margin-top:20px}
+.note{text-align:center;color:var(--muted);font-size:10px;margin-top:10px}
+.venue{text-align:center;max-width:720px;margin:auto;border:1px solid #e6c58b55;padding:32px 20px}
+.venue h3{font:500 36px "Cormorant Garamond",serif}.venue p{color:var(--muted);font-size:13px;margin:10px 0 22px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.closing{text-align:center;padding:70px 0;border-top:1px solid var(--line)}
+.closing h2{font:italic 48px "Cormorant Garamond",serif;color:var(--gold)}
+.closing p{color:var(--muted);font-size:13px;margin:10px 0 20px}
+footer{text-align:center;padding:20px;color:var(--muted);font-size:10px;border-top:1px solid var(--line)}
+footer span{color:var(--rose)}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:650px){.nav small{font-size:8px;letter-spacing:1px}.hero{min-height:92svh}.hero:before{width:88vw}.hero:after{width:75vw}section.content{padding:60px 0}.detail-grid{grid-template-columns:1fr}.detail{padding:16px}.story{grid-template-columns:1fr}.countdown{gap:6px}.time{padding:16px 3px}.time span{font-size:8px;letter-spacing:0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <header class="topbar"><div class="container topbar-inner"><a class="brand" href="#">THE INVITATION</a><span class="top-label">A special occasion</span></div></header>
-  <main>
-    <section class="hero"><div class="container">
-      <p class="eyebrow">A moment worth celebrating</p>
-      <h1>You're <span>Invited.</span></h1>
-      <p class="hero-copy">Some moments become beautiful memories. We would love for you to be part of ours.</p>
-      <button class="gold-button" id="openInvitation" type="button">Open Your Invitation <span aria-hidden="true">↗</span></button>
-      <p class="hero-note">A celebration of love, joy &amp; togetherness</p>
-    </div></section>
-    <section class="section" id="invitation"><div class="container">
-      <div class="section-heading reveal"><p class="eyebrow">With great pleasure</p><h2>A Personal Invitation</h2><p>We warmly invite you to celebrate this special day with us.</p></div>
-      <article class="invitation reveal">
-        <p class="small-title">Together with our family</p><h2 id="eventTitle">A Beautiful Celebration</h2>
-        <p class="message" id="invitationMessage">Your presence would make this occasion even more memorable. Please join us as we share happiness, laughter and wonderful memories.</p>
-        <div class="divider" aria-hidden="true">✦ ─ ✦ ─ ✦</div><p class="small-title">Hosted with love by</p><h2 id="hostName">Your Family</h2>
-        <div class="details-grid">
-          <div class="detail-card"><div class="symbol" aria-hidden="true">◷</div><h3>Date</h3><p id="eventDate">25 December 2026</p><p class="subtext" id="eventDay">Friday</p></div>
-          <div class="detail-card"><div class="symbol" aria-hidden="true">◴</div><h3>Time</h3><p id="eventTime">6:00 PM onwards</p><p class="subtext">Please arrive on time</p></div>
-          <div class="detail-card"><div class="symbol" aria-hidden="true">⌖</div><h3>Venue</h3><p id="venueShort">Your Event Venue</p><p class="subtext">We look forward to seeing you</p></div>
-        </div>
-      </article>
-    </div></section>
-    <section class="countdown-section reveal"><div class="container"><p class="eyebrow">The countdown begins</p><div class="section-heading"><h2 id="countdownHeading">Until We Celebrate</h2><p>We can't wait to welcome you.</p></div>
-      <div class="countdown" aria-label="Countdown to the event"><div class="time-box"><strong id="days">00</strong><span>Days</span></div><div class="time-box"><strong id="hours">00</strong><span>Hours</span></div><div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div><div class="time-box"><strong id="seconds">00</strong><span>Seconds</span></div></div>
-    </div></section>
-    <section class="section" id="rsvp"><div class="container">
-      <div class="section-heading reveal"><p class="eyebrow">Kindly respond</p><h2>Will You Join Us?</h2><p>Please let us know if you can attend.</p></div>
-      <form class="rsvp-card reveal" id="rsvpForm"><p>Your response will open in WhatsApp for you to send.</p>
-        <div class="form-grid">
-          <div class="field"><label for="guestName">Your full name *</label><input id="guestName" name="guestName" type="text" maxlength="100" placeholder="Enter your name" required></div>
-          <div class="field"><label for="guestCount">Number of guests *</label><select id="guestCount" name="guestCount" required><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6+">6 or more guests</option></select></div>
-          <div class="field full"><label for="attendance">Will you attend? *</label><select id="attendance" name="attendance" required><option value="Yes, I will attend">Yes, I'll be there!</option><option value="Sorry, I cannot attend">Sorry, I can't attend</option></select></div>
-          <div class="field full"><label for="guestMessage">Message (optional)</label><textarea id="guestMessage" name="guestMessage" maxlength="500" placeholder="Write a message for the host"></textarea></div>
-        </div>
-        <button class="gold-button" type="submit">Confirm via WhatsApp ↗</button><p class="form-note">WhatsApp will open with your response ready to send.</p>
-      </form>
-    </div></section>
-    <section class="section" id="venue"><div class="container">
-      <div class="section-heading reveal"><p class="eyebrow">Find your way</p><h2>Event Location</h2><p>We look forward to welcoming you in person.</p></div>
-      <div class="venue-box reveal"><h3 id="venueName">Your Event Venue</h3><p id="venueAddress">Enter your full venue address here.</p><div class="venue-actions"><a class="gold-button" id="mapLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get Directions ↗</a><button class="outline-button" id="shareButton" type="button">Share Invitation</button></div></div>
-    </div></section>
-    <section class="closing"><div class="container"><p class="eyebrow">Your presence is our present</p><h2>Hope to See You There.</h2><p>With love and warm wishes, <span id="closingHost">Your Family</span></p><a class="outline-button" href="#rsvp">Respond to Invitation</a></div></section>
-  </main>
-  <footer><div class="container">Made with <span>♥</span> for a special moment</div></footer>
-  <script>
-    // EDIT YOUR EVENT DETAILS HERE
-    const EVENT = {
-      title: "A Beautiful Celebration",
-      host: "Your Family",
-      message: "Your presence would make this occasion even more memorable. Please join us as we share happiness, laughter and wonderful memories.",
-      // Format: YYYY-MM-DDTHH:MM:SS+05:30 for India
-      dateTime: "2026-12-25T18:00:00+05:30",
-      displayDate: "25 December 2026",
-      displayTime: "6:00 PM onwards",
-      venue: "Your Event Venue",
-      address: "Enter your full venue address, Hyderabad, Telangana",
-      // Replace with host WhatsApp number including country code (India: 91 + 10-digit number)
-      whatsappNumber: "919876543210"
-    };
+<header><div class="wrap nav"><a class="brand" href="#">FOREVER & ALWAYS</a><small>A celebration of love</small></div></header>
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="ornament">✦ ❧ ✦</div>
+    <p class="kicker">Please join us to celebrate</p>
+    <h1>Our Wedding <span>Anniversary</span></h1>
+    <p class="intro">A beautiful journey, countless memories, and a love that keeps growing. We would be delighted to celebrate this special milestone with you.</p>
+    <a class="btn" href="#invitation">Open Your Invitation <span>↗</span></a>
+    <p class="hint">Love · Laughter · Togetherness</p>
+  </div>
+</section>
 
-    document.title = EVENT.title + " | You're Invited";
-    document.getElementById("eventTitle").textContent = EVENT.title;
-    document.getElementById("hostName").textContent = EVENT.host;
-    document.getElementById("closingHost").textContent = EVENT.host;
-    document.getElementById("invitationMessage").textContent = EVENT.message;
-    document.getElementById("eventDate").textContent = EVENT.displayDate;
-    document.getElementById("eventTime").textContent = EVENT.displayTime;
-    document.getElementById("venueShort").textContent = EVENT.venue;
-    document.getElementById("venueName").textContent = EVENT.venue;
-    document.getElementById("venueAddress").textContent = EVENT.address;
+<section class="content" id="invitation"><div class="wrap">
+  <div class="heading reveal"><p class="kicker">With love and gratitude</p><h2>Two Hearts, One Beautiful Journey</h2><p>Celebrating the memories we've made and the moments still to come.</p></div>
+  <article class="invite-card reveal">
+    <p class="script">Together with our families</p>
+    <div class="couple"><span id="partnerOne">Ayesha</span><br><span class="amp">&amp;</span><br><span id="partnerTwo">Mohammad</span></div>
+    <p class="message" id="inviteMessage">As we celebrate another year of love, friendship and togetherness, we warmly invite you to share this special day with us.</p>
+    <div class="flourish">✦ ─ ❧ ─ ✦</div>
+    <p class="kicker">Our anniversary celebration</p>
+    <div class="detail-grid">
+      <div class="detail"><div class="icon">♡</div><h3>Date</h3><p id="eventDate">25 December 2026</p><small id="eventDay">Friday</small></div>
+      <div class="detail"><div class="icon">◷</div><h3>Time</h3><p id="eventTime">7:00 PM onwards</p><small>Kindly arrive on time</small></div>
+      <div class="detail"><div class="icon">⌖</div><h3>Venue</h3><p id="venueShort">The Celebration Hall</p><small>We look forward to seeing you</small></div>
+    </div>
+  </article>
+</div></section>
 
-    const eventTimestamp = new Date(EVENT.dateTime).getTime();
-    document.getElementById("eventDay").textContent = new Intl.DateTimeFormat("en-IN", {weekday:"long", timeZone:"Asia/Kolkata"}).format(new Date(EVENT.dateTime));
-    document.getElementById("mapLink").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(EVENT.address);
+<section class="content"><div class="wrap">
+  <div class="heading reveal"><p class="kicker">Our journey</p><h2>A Love Worth Celebrating</h2><p>Every year adds another beautiful chapter to our story.</p></div>
+  <div class="story">
+    <article class="story-card reveal"><div class="num">01</div><h3>The Day It Began</h3><p id="storyOne">A special day brought us together and began a journey filled with love, trust and friendship.</p></article>
+    <article class="story-card reveal"><div class="num">02</div><h3>Forever in Progress</h3><p id="storyTwo">Through every smile and every challenge, we continue to choose each other—today and always.</p></article>
+  </div>
+</div></section>
 
-    const pad = number => String(number).padStart(2, "0");
-    function updateCountdown() {
-      const remaining = eventTimestamp - Date.now();
-      if (!Number.isFinite(eventTimestamp) || remaining <= 0) {
-        ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).textContent = "00");
-        document.getElementById("countdownHeading").textContent = Number.isFinite(eventTimestamp) ? "The Celebration Has Begun!" : "Check Event Date";
-        return;
-      }
-      document.getElementById("days").textContent = pad(Math.floor(remaining / 86400000));
-      document.getElementById("hours").textContent = pad(Math.floor((remaining % 86400000) / 3600000));
-      document.getElementById("minutes").textContent = pad(Math.floor((remaining % 3600000) / 60000));
-      document.getElementById("seconds").textContent = pad(Math.floor((remaining % 60000) / 1000));
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+<section class="countdown-section reveal"><div class="wrap">
+  <p class="kicker">The celebration begins in</p><div class="heading"><h2 id="countdownHeading">Counting Down to Our Special Day</h2><p>We can't wait to celebrate with you.</p></div>
+  <div class="countdown"><div class="time"><strong id="days">00</strong><span>Days</span></div><div class="time"><strong id="hours">00</strong><span>Hours</span></div><div class="time"><strong id="minutes">00</strong><span>Minutes</span></div><div class="time"><strong id="seconds">00</strong><span>Seconds</span></div></div>
+</div></section>
 
-    document.getElementById("openInvitation").addEventListener("click", () => {
-      document.getElementById("invitation").scrollIntoView({behavior:"smooth", block:"start"});
-    });
+<section class="content" id="rsvp"><div class="wrap">
+  <div class="heading reveal"><p class="kicker">Kindly respond</p><h2>Will You Celebrate With Us?</h2><p>Your presence will make our day even more special.</p></div>
+  <form class="rsvp reveal" id="rsvpForm"><p>Please share your response below. WhatsApp will open with your RSVP message ready to send.</p>
+    <div class="form-grid">
+      <div class="field"><label for="guestName">Your name *</label><input id="guestName" type="text" maxlength="100" required placeholder="Enter your full name"></div>
+      <div class="field"><label for="guestCount">Number of guests *</label><select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6 or more</option></select></div>
+      <div class="field full"><label for="attendance">Will you attend? *</label><select id="attendance"><option value="Yes, we will attend">Yes, we'll be there!</option><option value="Sorry, we cannot attend">Sorry, we can't attend</option></select></div>
+      <div class="field full"><label for="guestMessage">A note for the couple (optional)</label><textarea id="guestMessage" maxlength="500" placeholder="Write your wishes here"></textarea></div>
+    </div>
+    <button class="btn" type="submit">Send RSVP via WhatsApp ↗</button><p class="note">Your response is sent only when you press Send in WhatsApp.</p>
+  </form>
+</div></section>
 
-    const revealElements = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {threshold:0.12});
-      revealElements.forEach(element => observer.observe(element));
-    } else {
-      revealElements.forEach(element => element.classList.add("visible"));
-    }
+<section class="content" id="venue"><div class="wrap">
+  <div class="heading reveal"><p class="kicker">Join us</p><h2>Celebrate With Us</h2><p>We look forward to sharing this memorable evening with you.</p></div>
+  <div class="venue reveal"><h3 id="venueName">The Celebration Hall</h3><p id="venueAddress">Enter your venue address, Hyderabad, Telangana</p><div class="actions"><a class="btn" id="mapLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get Directions ↗</a><button class="btn secondary" id="shareButton" type="button">Share Invitation</button></div></div>
+</div></section>
+<section class="closing"><div class="wrap"><p class="kicker">With all our love</p><h2>Forever &amp; Always</h2><p>Thank you for being part of our story.</p><a class="btn secondary" href="#rsvp">RSVP Now</a></div></section>
+</main>
+<footer>Made with <span>♥</span> to celebrate a lifetime of love</footer>
+<script>
+/* CUSTOMIZE YOUR ANNIVERSARY DETAILS IN THIS OBJECT */
+const EVENT = {
+  partnerOne: "Mohammad Ghouse",
+  partnerTwo: "Anees Fathima Begum",
+  title: "Our Wedding Anniversary",
+  message: "As we celebrate another year of love, friendship and togetherness, we warmly invite you to share this special day with us.",
+  dateTime: "2026-10-09T19:00:00+05:30",
+  displayDate: "9 October 2026",
+  displayTime: "7:00 PM onwards",
+  venue: "The Celebration Hall",
+  address: "Tap Get Directions to open our venue location in Google Maps",
+  mapUrl: "https://maps.app.goo.gl/65NxPsH36g7evSeP6",
+  whatsappNumber: "919876543210"
+};
 
-    document.getElementById("rsvpForm").addEventListener("submit", event => {
-      event.preventDefault();
-      const guestName = document.getElementById("guestName").value.trim();
-      const guestCount = document.getElementById("guestCount").value;
-      const attendance = document.getElementById("attendance").value;
-      const guestMessage = document.getElementById("guestMessage").value.trim();
-      if (!guestName) { alert("Please enter your name."); return; }
+document.title = EVENT.title + " | You're Invited";
+document.getElementById("partnerOne").textContent = EVENT.partnerOne;
+document.getElementById("partnerTwo").textContent = EVENT.partnerTwo;
+document.getElementById("inviteMessage").textContent = EVENT.message;
+document.getElementById("eventDate").textContent = EVENT.displayDate;
+document.getElementById("eventTime").textContent = EVENT.displayTime;
+document.getElementById("venueShort").textContent = EVENT.venue;
+document.getElementById("venueName").textContent = EVENT.venue;
+document.getElementById("venueAddress").textContent = EVENT.address;
+document.getElementById("eventDay").textContent = new Intl.DateTimeFormat("en-IN",{weekday:"long",timeZone:"Asia/Kolkata"}).format(new Date(EVENT.dateTime));
+document.getElementById("mapLink").href = EVENT.mapUrl;
 
-      const message = [
-        "RSVP - " + EVENT.title, "",
-        "Name: " + guestName,
-        "Guests: " + guestCount,
-        "Attendance: " + attendance,
-        "Event date: " + EVENT.displayDate,
-        "Event venue: " + EVENT.venue,
-        guestMessage ? "Message: " + guestMessage : ""
-      ].filter(Boolean).join("\n");
+const eventTimestamp = new Date(EVENT.dateTime).getTime();
+const pad = n => String(n).padStart(2,"0");
+function updateCountdown(){
+  const remaining = eventTimestamp - Date.now();
+  if(!Number.isFinite(eventTimestamp) || remaining <= 0){
+    ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
+    document.getElementById("countdownHeading").textContent = Number.isFinite(eventTimestamp) ? "Today Is Our Special Day!" : "Please Check the Event Date";
+    return;
+  }
+  document.getElementById("days").textContent = pad(Math.floor(remaining/86400000));
+  document.getElementById("hours").textContent = pad(Math.floor((remaining%86400000)/3600000));
+  document.getElementById("minutes").textContent = pad(Math.floor((remaining%3600000)/60000));
+  document.getElementById("seconds").textContent = pad(Math.floor((remaining%60000)/1000));
+}
+updateCountdown(); setInterval(updateCountdown,1000);
 
-      const number = EVENT.whatsappNumber.replace(/\D/g, "");
-      if (!/^\d{10,15}$/.test(number) || number === "919876543210") {
-        alert("Please replace the sample WhatsApp number in the EVENT settings with your real number, including country code.");
-        return;
-      }
-      window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
-    });
+const revealItems=document.querySelectorAll(".reveal");
+if("IntersectionObserver" in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+ revealItems.forEach(el=>observer.observe(el));
+}else revealItems.forEach(el=>el.classList.add("visible"));
 
-    document.getElementById("shareButton").addEventListener("click", async () => {
-      const shareData = {
-        title: EVENT.title + " | You're Invited",
-        text: "You're invited to " + EVENT.title + " on " + EVENT.displayDate + ". " + EVENT.address,
-        url: window.location.href
-      };
-      try {
-        if (navigator.share) {
-          await navigator.share(shareData);
-        } else if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(shareData.text + "\n" + shareData.url);
-          alert("Invitation link and details copied!");
-        } else {
-          window.prompt("Copy this invitation link:", window.location.href);
-        }
-      } catch (error) {
-        if (error.name !== "AbortError") alert("Unable to share automatically. Please copy the page link.");
-      }
-    });
-  </script>
+document.getElementById("rsvpForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("guestName").value.trim();
+ const guests=document.getElementById("guestCount").value;
+ const attendance=document.getElementById("attendance").value;
+ const note=document.getElementById("guestMessage").value.trim();
+ if(!name){alert("Please enter your name.");return}
+ const message=["RSVP - "+EVENT.title,"","Name: "+name,"Guests: "+guests,"Attendance: "+attendance,"Date: "+EVENT.displayDate,"Venue: "+EVENT.venue,note?"Message: "+note:""].filter(Boolean).join("\n");
+ const number=EVENT.whatsappNumber.replace(/\D/g,"");
+ if(!/^\d{10,15}$/.test(number)||number==="919876543210"){alert("Please replace the sample WhatsApp number in the EVENT settings with your number including country code.");return}
+ window.open("https://wa.me/"+number+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+});
+
+document.getElementById("shareButton").addEventListener("click",async()=>{
+ const data={title:EVENT.title,text:"You're invited to "+EVENT.title+" on "+EVENT.displayDate+". "+EVENT.address,url:window.location.href};
+ try{
+  if(navigator.share) await navigator.share(data);
+  else if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(data.text+"\n"+data.url);alert("Invitation link and details copied!")}
+  else window.prompt("Copy your invitation link:",window.location.href);
+ }catch(error){if(error.name!=="AbortError")alert("Unable to share automatically. Please copy the page link.")}
+});
+</script>
 </body>
 </html>
